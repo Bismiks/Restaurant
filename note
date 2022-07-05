@@ -1,0 +1,179 @@
+
+                        ...................... ANGULAR NOTES .....................
+
+
+NEW PROJECT     -   npx create-react-app luminar (caplock not allowed in project name)
+start project - cd luminar
+                npm start
+delete not need files - called cleanup 
+
+in react source point (running point) is - src -> index.js
+   in that 'App' is our web app
+   Render means -  display to UI
+
+install dom
+
+
+
+
+                                    Advantages of React js
+                                    1.	React uses a component based approach
+                                    2.	React uses a concept called jsx :- Javascript xml
+                                    3.	React uses virtual DOM // important
+                                    4.	REACT USING ENGINE FOR RECONCILATION :- FIBER
+                                    5.	ANGULAR USES REAL DOM
+
+* create component - open src file add new file - first letter be caplock - like :-- Home.js
+* use 'rfce' for autoload page
+
+
+                              -------------create State-------------
+
+      :: state is more like variable creation in a component 
+      :: state is an object that holds peace of information inside a component which may change over a time
+      :: state used for store data in a component
+     
+
+* state means create current state
+* class based components - statefull components - is used when state concept introduced in react
+* function based components - stateless components
+* After became React 16.8 it introduce 'HOOKS'
+
+                        -------------- HOOKS ---------------
+
+* after introduction of react hooks function based components can be written as statefull components - 
+
+            : FOR CREATE STATE IN REACT THERE IS A HOOK CALLED :- {useState}
+
+                   eg:     import {useState} from 'react'
+                           const [name,setName] = useState('RINS')   [CHECK App.js]
+                            2 parameters - [initial state,set State]
+                                                  name   ,   setName
+            useEffect() = for fetch data 
+                        useEffect() used for stoping infinit execution of data when page once load
+                        after using data will execute when once a page load,its help lagging the page,
+                              ------------- Fetch data ------------------
+
+                              javascript used for written functions
+
+                     Method 1 =>    In all web pages fuctions that fetch from APIs will be async functions
+
+                              eg:- async function fnName(){
+                                    await fetch()
+                              }
+
+                             
+                      ....  //await keyword distinguish that it is an ascyn () fn async await fn   ....                                  
+                        // fetch is an javascript inbuilt method
+
+
+                     Method 2 => same concept using arrow fn() or ES6 syntax using arrow fn 
+
+                              eg: const fnName = () =>{
+
+                              }
+                         
+                    Method 3 => normal syntax using normal fn  
+                             
+                              eg: function fnNAme(){
+
+                              }
+
+
+* Event handlers :- onClick
+ 
+// inline function
+
+      <button onClick={() => setCounter(counter+1)}>Click me !!!</button>
+// Better way is using normal function
+
+
+// State is an object that holds a place of information inside a component
+
+                                   
+                                   
+                                   ............data sharing in component to component..............
+
+
+                        1.props - Properties is used to communicate b/w parent component and child component
+
+
+instead of forEach in react we use ...map fn.... is the better way  [for print data in o/p scrn]
+
+
+                                                * Lifecycle methods of a component :-
+
+                                                1. Mounting - componentDidMount()
+                                                2. Updating - componentDidUpdate()
+                                                3. unmounting - componentDidUnmount()
+                                             :- using useEffect hook we can impliment lifecycle methods   
+
+
+* install external library
+
+           :-- Rebuilt with React
+                  React-Bootstrap replaces the Bootstrap JavaScript. Each component has been built from scratch as a true React component, without unneeded dependencies like jQuery.
+
+* mapping used instead of foreach hotels.map() . Render data from array
+
+                              <Row>
+                              {
+                                    hotels.map(item =>( 
+                                    <Col sm={12} md={8} lg={6} xl={3}>
+                                          <RestaurantCard data={item}/>
+                                    </Col>
+                                    ))
+                              }
+                              </Row>
+
+* React Routing DOM -based on action or req user is direct to diff pages ( Redirecting one to another page )
+
+      1. Routing - 
+          
+          1.1 Base URL - its constant / static
+
+          1.2 Params - it will be changing dynamically  <Route path='/details/:id' element={<RestaurantDetails/>}/> 
+                     = [id is params]
+
+      2. In React there is a libray for Routing purpose 
+         :- npm i react-router-dom
+
+      3. String interpolation - concatinate of static and dynamic content
+
+      4. Link tag - used instead of "a" tag <a href=""> 
+      
+             ** <Link to=""> for content make clickable in React 
+
+            // Link clickable akkan sadharana anger tag use cheyyum :- <a href="">
+      
+      5.Ternary op :- condition ? (stmnt1) : (stmnt2)
+
+
+* React advanced topic - REDUX 
+
+      1. REDUX  is a State Management Tool
+
+      2. Usage :- 
+      
+      3. 3 librarys npm i redux react-redux redux-thunk 
+
+      4. thunk is a middle ware - for error finding? crash,bug reporting , lag delay (handle delay)
+
+
+
+
+------------------ promises -------------------
+
+simply asyncrnous fn returns a promise
+
+promises is an o/p of async fn
+
+:= Request, success, fail   -  47:00
+
+promises stages 3:-  reject , resolved, pending OR success , failer , pending
+
+                      *  reject uses - catch
+
+                      *  resolved uses - then
+
+use of axios - api handle cheyyan use cheyyunna 3rd party library
